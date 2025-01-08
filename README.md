@@ -28,6 +28,9 @@ This repository contains the implementation and resources for the paper *"Topic 
 - Advanced visualizations of document clustering, topic trends, and classification performance.
 - Exporting MongoDB collections to JSON for analysis.
 
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 ## Requirements
 - Python 3.8 or later
 - Required libraries are listed in `requirements.txt`. Install them using:

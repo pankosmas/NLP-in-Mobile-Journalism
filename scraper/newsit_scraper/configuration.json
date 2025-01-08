@@ -1,0 +1,26 @@
+{
+    "news": {
+        "start_url": "https://www.newsit.gr/",
+        "regex": "^https://www\\.newsit\\.gr/category/[a-zA-Z]+/?$",
+        "category": "li.menu-item a::attr(href)",
+        "category_name": "li.menu-item a::text",
+        "articles_container": "section.category__posts",
+        "article": "article.article",
+        "title_selector": "h3.post__title a::text",
+        "article_url": "h3.post__title a::attr(href)",
+        "image_url": "figure a.post_img img::attr(src)",
+        "content_selector": "div.article-content",
+        "summary": "div.article-excerpt",
+        "author": null,
+        "text": "div.entry-content section p",
+        "tags": "div.entry-data ul.menu.tag-menu li.bluish-box a::text",
+        "date_selector": "time.fs-sm.beige-dark-gray-text.row.center-center.gap-xs::attr(datetime)",
+        "time_selector": null,
+        "category_selector": "a.category-link",
+        "url_concat": false,
+        "pagination": true,
+        "dynamic_loading": false,
+        "date_limit": "2024-01-01"
+    }
+  }
+  

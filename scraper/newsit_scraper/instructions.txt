@@ -1,0 +1,75 @@
+** Install Dependencies **
+pip install scrapy scrapy-splash pymongo w3lib
+
+** Prepare the configuration.json File **
+Create a configuration.json file in the same directory as the script. Ensure it includes details like:
+
+start_url
+CSS selectors for categories, articles, titles, and other elements
+Regular expressions and pagination information
+
+** Start MongoDB **
+mongod
+
+** Run the Scrapy Spider **
+scrapy runspider newspider.py
+
+** Optional Debugging **
+scrapy runspider newspider.py -s LOG_LEVEL=DEBUG
+
+
+===============================================================================================================
+
+
+pip isntall Scrapy
+scrapy strartproject my_project (inside the proper directory)
+
+This creates the following structure:
+
+markdown
+Copy code
+my_project/
+├── scrapy.cfg
+└── my_project/
+    ├── __init__.py
+    ├── items.py
+    ├── middlewares.py
+    ├── pipelines.py
+    ├── settings.py
+    └── spiders/
+        └── __init__.py
+
+my_project/
+├── scrapy.cfg
+└── my_project/
+    ├── spiders/
+    │   ├── newspider.py
+    │   └── __init__.py
+    ...
+
+
+** Configure Settings **
+In my_project/settings.py, add any necessary configurations:
+
+MongoDB settings (if using):
+
+MONGO_URI = 'mongodb://localhost:27017'
+MONGO_DATABASE = 'news_database'
+
+Enable Splash Middleware if needed:
+
+DOWNLOADER_MIDDLEWARES = {
+    'scrapy_splash.SplashCookiesMiddleware': 723,
+    'scrapy_splash.SplashMiddleware': 725,
+    'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
+}
+
+SPLASH_URL = 'http://localhost:8050'
+DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
+HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
+
+** Run the spider **
+scrapy crawl newspider
+
+** (Optional) Debug Standalone Script **
+scrapy runspider newspider.py
