@@ -1,9 +1,3 @@
-
----
-
-### README for Data (`README_DATA.md`)
-
-```markdown
 # Data Availability
 
 The datasets used in this project consist of:
