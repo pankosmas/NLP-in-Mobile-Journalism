@@ -23,10 +23,10 @@ sites = {
     "cnn": ["politiki", "oikonomia", "ellada", "kosmos", "sports", "tech", "perivallon", "style/politismos"],
     "iefimerida": ["oikonomia", "politiki", "ellada", "kosmos", "politismos", "ygeia", "spor", "tehnologia"],
     "newsit": ["ellada", "kosmos", "politikh", "oikonomia", "athlitika", "texnologia", "ygeia", "kairos"],
-    "enikos": ["politics", "economy", "international", "society", "sports", "ygeia"],
     "pronews": ["category/elliniki-politiki/", "category/athlitismos/", "category/ygeia/", "category/thriskeia/",
                 "category/perivallon/", "category/politismos/", "category/oikonomia/", "category/kosmos/",
-                "category/koinonia/", "category/epistimes/"]
+                "category/koinonia/", "category/epistimes/"],
+    # "enikos": ["politics", "economy", "international", "society", "sports", "ygeia"],
     # "newsbomb": ["ellada", "kosmos", "politikh", "ygeia", "oikonomia", "sports", "kairos", "bombplus/texnologia",
     #              "bombplus/politismos"],
 }
